@@ -1,0 +1,16 @@
+(library (name dspml)
+  (wrapped false)
+  (libraries logs sndfile bigarray lacaml fftw3 gnuplot gsl)
+  (preprocess (pps logs-ppx))
+  (public_name dspml)
+  (foreign_stubs (language c)
+    (names de_wrap remez_wrap)
+    (flags -I/usr/local/include)
+  )
+  (c_library_flags (-ldspc))
+)
+(env
+  (dev
+    (flags (:standard -w -6-26-27-32-37-52 -g -thread))
+  )
+)
