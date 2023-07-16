@@ -1,6 +1,6 @@
 (library (name dspml)
   (wrapped false)
-  (libraries logs sndfile bigarray lacaml fftw3 gnuplot gsl)
+  (libraries logs sndfile bigarray lacaml fftw3 gnuplot)
   (preprocess (pps logs-ppx))
   (public_name dspml)
   (foreign_stubs (language c)
